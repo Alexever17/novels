@@ -1,25 +1,44 @@
-//First load of data when index.html is accessed
-function indexBuild() {
-  // selecting all the necessery fields out of the "novel" container
-  var names = document.querySelectorAll(".novel .title");
-  var ranking = document.querySelectorAll(".novel .ranking");
-  var holder = document.querySelectorAll(".novel .holder");
-  var descr = document.querySelectorAll(".novel .description");
-  var parents = document.querySelectorAll(".novel");
+window.onload = function(){
 
-  //there are only 3 novels loaded in the index.html file, which are always the 3 top of the library
-  for (var i = 0; i < 3; i++) {
-    names[i].innerHTML = lib[i].name;
-    ranking[i].innerHTML = "Rating: "+lib[i].ranking+"/5";
-    holder[i].innerHTML = '<a href="'+lib[i].picSource+'"><img src="'+lib[i].picSource+'" alt="'+lib[i].name+' Cover'+'" class="cover" width="230px" height="329px"></a>';
-    descr[i].innerHTML = "<b>Description: </b><br>" + lib[i].description;
+    //ids of novels to load into the homepage
+    var homepageIDs = ["5ad264c4835be300042faab8", "5ad26562835be300042faab9", "5ad265b7835be300042faaba"];
+    //array to store the get request necessery to build the homepage
+    var promises = [];
 
-    //adds a link to a website called novelupdates which has more info about a particular novel
-    var linkparent = document.createElement("div");
-    linkparent.setAttribute("class", "linkparent");
-    linkparent.innerHTML = '<a href="'+lib[i].url+'" class="link">More Information here</a>';
-    parents[i].insertBefore(linkparent,descr[i]);
+    for (var i = 0; i < 3; i++) {
+        promises.push(axios.get('https://alexever17.herokuapp.com/api/novels?id=' + homepageIDs[i]));
+    }
 
+    //forces to wait for all the promises to be fullfilled, enables to use the for loop
+    Promise.all(promises)
+    .then((response) => {
+        for (var i = 0; i < 3; i++) {
+            //this take the response from the get request, takes only the data from it and sends it to the
+            //divConstructor function which makes an html element with all the data from the request
+            divConstructor(response[i].data);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+};
 
-  }
+//takes in JSON from an get request and generates and adds a html element with this information
+function divConstructor(response) {
+    var novel = document.createElement("div");
+    novel.setAttribute("class", "novel");
+    novel.innerHTML = `
+        <h3 class="title">${response.name}</h3>
+        <h4 class="ranking">Rating: ${response.ranking}/5</h4>
+        <div class="holder">
+            <a href="${response.picSource}">
+                <img src="${response.picSource}" alt="${response.name} Cover" class="cover" width="230px" height="329px">
+            </a>
+        </div>
+        <div class="linkparent">
+            <a href="${response.url}" class="link">More Information here</a>
+        </div>
+        <p class="description"><b>Description: </b><br>${response.description}</p>
+    `
+    document.getElementById("main").appendChild(novel);
 }
