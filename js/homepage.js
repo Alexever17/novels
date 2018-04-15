@@ -4,8 +4,8 @@ window.onload = function(){
     //loops through the array, makes a request with the id out of the array,
     //waits for the response and sends the data to the divConstructor
     homepageIDs.forEach(async function(id) {
+        //axios is a open source js file which makes get request very easy
         const novel = await axios.get(`https://alexever17.herokuapp.com/api/novel/${id}`);
-        console.log(novel);
         divConstructor(novel.data);
     });
 
