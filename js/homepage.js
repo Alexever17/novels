@@ -1,12 +1,15 @@
 window.onload = function(){
+    //the novels loaded into the frontpage
     var homepageIDs = ["5ad264c4835be300042faab8", "5ad26562835be300042faab9", "5ad265b7835be300042faaba"];
+    //loops through the array, makes a request with the id out of the array,
+    //waits for the response and sends the data to the divConstructor
     homepageIDs.forEach(async function(id) {
-        const novel = await axios.get(`http://localhost:5000/api/novel/${id}`);
+        const novel = await axios.get(`https://alexever17.herokuapp.com/api/novel/${id}`);
         console.log(novel);
         divConstructor(novel.data);
-
     });
 
+    //makes a div element out of the get request --> div with class "novel"
     function divConstructor(response) {
         var novel = document.createElement("div");
         novel.setAttribute("class", "novel");
