@@ -13,6 +13,7 @@ window.onload = function(){
     function divConstructor(response) {
         var novel = document.createElement("div");
         novel.setAttribute("class", "novel");
+        // the elements structure
         novel.innerHTML = `
             <h3 class="title">${response.name}</h3>
             <h4 class="ranking">Rating: ${response.ranking}/5</h4>

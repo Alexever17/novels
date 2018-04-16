@@ -1,27 +1,38 @@
 //first load of data for top.html when its accessed
-function topBuild() {
-  //the elements on the page which is a single novels have the class thumbnail
-  var thumbnail = document.querySelectorAll(".thumbnail");
+window.onload = function(){
+    //async make it easier to make promises and await for the requests
+    async function asyncCall() {
+        //axios is a open source js file which makes get request very easy
+        const novel = await axios.get(`https://alexever17.herokuapp.com/api/novels/ranking/5`);
+        //gets the array with the data and makes all the small html elements
+        thumbnailConstructor(novel.data);
+    }
 
-  //there are 8 novels/thumbnails loaded in top.html, which are always the top 8 of the library
-  for (var i = 0; i < 8; i++) {
-    //loading the empty html structure into the thumbnails
-    thumbnail[i].innerHTML = '<h4 class="info" onclick="openModal(' + lib[i].id + ')">i</h4><div class="holder"></div><h3 class="title"></h3>';
-  }
+    asyncCall();
 
-  //selecting the elements from the html structure
-  var names = document.querySelectorAll(".line .title");
-  var ranking = document.querySelectorAll(".line .ranking");
-  var holder = document.querySelectorAll(".line .holder");
-  var des = document.querySelectorAll(".line .description");
+    function thumbnailConstructor(response) {
+        //only a certain number of characters can be in the name to not break the design
+        var characterLimiter = 35;
+        //there are 8 thumbnails on the website
+        for (var i = 0; i < 8; i++) {
 
-  for (var j = 0; j < 8; j++) {
-    //because some title are too long, the title text has to be cut at 35 characters
-    var characterLimiter = 33;
-    // undexXXCharacterCheck takes in the id of a particular novel and the number
-    // of character you want to have as output and gives back a string
-    var insert = underXXCharacterCheck(j, characterLimiter);
-    names[j].innerHTML = insert;
-    holder[j].innerHTML = '<a href="'+lib[j].picSource+'"><img src="'+lib[j].picSource+'" alt="'+lib[j].name+' Cover'+'" class="cover" width="146px" height="210px"></a>';
-  }
+            var nameInsert = underXXCharacterCheck(response[i].name, characterLimiter);
+            var novel = document.createElement("div");
+            novel.setAttribute("class", "thumbnail");
+
+            novel.innerHTML = `
+                <h4 class="info" onclick="openModal(${response[i]._id})">i</h4>
+                <div class="holder">
+                    <a href="${response[i].picSource}">
+                        <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover" width="146px" height="210px">
+                    </a>
+                </div>
+                <h3 class="title">${nameInsert}</h3>
+            `
+
+            var lineNumber = (i < 4) ? 0 : 1;
+            //there are 2 lines which can take in up to 4 thumbnails
+            document.querySelectorAll(".line")[lineNumber].appendChild(novel);
+        }
+    }
 }
