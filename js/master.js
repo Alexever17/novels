@@ -47,34 +47,39 @@ function compareAccordions(a, b) {
 }
 
 //takes as variable the id for the lib entry and inputs the data into the modal which is first hidden.
-function openModal(i) {
+function openModal(id) {
     //on starting the function, the modal box which is hidden is set to block
     document.getElementById('modalTop').style.display = "block";
+    console.log(id);
+    asyncCall();
+    //async make it easier to make promises and await for the requests
+    async function asyncCall() {
+        //axios is a open source js file which makes get request very easy
+        const novel = await axios.get(`https://alexever17.herokuapp.com/api/novel/${id}`);
+        //gets the data and fills the modal box with data
+        console.log("success");
+        modalConstructor(novel.data);
+    }
 
-    //loading the container element for the text of the modal box "modalContent", because the 'modalTop' class is just semi transparent black
-    var modal = document.querySelector(".modalContent");
-    //loading the empty html structure to the modal
-    modal.innerHTML = '<h4 id="close" class="close" onclick="closeModal()">x</h4> <h3 class="title"></h3> <h4 class="ranking"></h4> <div class="holder"></div> <p class="description"></p>';
-
-    //selecting all the html elements
-    var names = document.querySelector(".modalContent .title");
-    var ranking = document.querySelector(".modalContent .ranking");
-    var holder = document.querySelector(".modalContent .holder");
-    var des = document.querySelector(".modalContent .description");
-
-    //adding the contents of the selected novel to the modal
-    names.innerHTML = lib[i].name;
-    ranking.innerHTML = "Rating: " + lib[i].ranking + "/5";
-    holder.innerHTML = '<a href="' + lib[i].picSource + '"><img src="' + lib[i].picSource + '" alt="' + lib[i].name + ' Cover' + '" class="cover" width="230px" height="329px"></a>';
-    des.innerHTML = "<b>Description: </b><br>" + lib[i].description;
-
-    //adds a link to a website called novelupdates which has more info about a particular novel
-    var linkparent = document.createElement("div");
-    linkparent.setAttribute("class", "linkparent");
-    linkparent.innerHTML = '<a href="' + lib[i].url + '" class="link">More Information here</a>';
-    modal.insertBefore(linkparent, des);
-
-
+    function modalConstructor(novel) {
+        //loading the container element for the text of the modal box "modalContent", because the 'modalTop' class is just semi transparent black
+        var modal = document.querySelector(".modalContent");
+        //loading the empty html structure to the modal
+        modal.innerHTML = `
+            <h4 id="close" class="close" onclick="closeModal()">x</h4>
+            <h3 class="title">${novel.name}</h3>
+            <h4 class="ranking">Rating: ${novel.ranking}/5</h4>
+            <div class="holder">
+                <a href="${novel.picSource}">
+                    <img src="${novel.picSource}" alt="${novel.name} Cover" class="cover" width="230px" height="329px">
+                </a>
+            </div>
+            <div class="linkparent">
+                <a href="${novel.url}" class="link">More Information here</a>
+            </div>
+            <p class="description"><b>Description: </b><br>${novel.description}</p>
+        `
+    }
 }
 
 //closes the modal

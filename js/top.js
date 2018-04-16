@@ -14,14 +14,14 @@ window.onload = function(){
         //only a certain number of characters can be in the name to not break the design
         var characterLimiter = 35;
         //there are 8 thumbnails on the website
-        for (var i = 0; i < 8; i++) {
+        for (let i = 0; i < 8; i++) {
 
             var nameInsert = underXXCharacterCheck(response[i].name, characterLimiter);
             var novel = document.createElement("div");
             novel.setAttribute("class", "thumbnail");
 
             novel.innerHTML = `
-                <h4 class="info" onclick="openModal(${response[i]._id})">i</h4>
+                <h4 class="info">i</h4>
                 <div class="holder">
                     <a href="${response[i].picSource}">
                         <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover" width="146px" height="210px">
@@ -33,6 +33,12 @@ window.onload = function(){
             var lineNumber = (i < 4) ? 0 : 1;
             //there are 2 lines which can take in up to 4 thumbnails
             document.querySelectorAll(".line")[lineNumber].appendChild(novel);
+
+            //putting an eventlistener on the childelement of the generated thumbnail
+            novel.childNodes[1].addEventListener('click', function(){
+                var id = response[i]._id.toString();
+                openModal(id);
+            });
         }
     }
 }
