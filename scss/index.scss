@@ -1,6 +1,6 @@
 @import "mixins";
 
-// NAVBAR
+// NAVBAR -------------------------------------------------------------
 
 .brand-logo img {
     height: 64px;
@@ -30,7 +30,7 @@
     }
 }
 
-// MAIN AREA
+// MAIN AREA ---------------------------------------------------------------
 
 #main {
     display: flex;
@@ -86,7 +86,7 @@
     }
 }
 
-// FOOTER
+// FOOTER -----------------------------------------------------------------
 
 footer {
     display: flex;
@@ -101,13 +101,7 @@ footer {
     padding: 10px;
 }
 
-@include media(420px) {
-    footer:nth-child(1) {
-        display: none;
-    }
-}
-
-// MODAL
+// MODAL ---------------------------------------------------------------
 
 .modalBOX {
     display: none; /* Hidden by default */

@@ -16,7 +16,7 @@ function openModal(id) {
     function modalConstructor(novel) {
         //loading the container element for the text of the modal box "modalContent", because the 'modalTop' class is just semi transparent black
         var modal = document.querySelector(".modalContent");
-        //loading the empty html structure to the modal
+        //loading the html structure to the modal
         modal.innerHTML = `
             <h4 class="btn purple lighten-2 stickOn" onclick="closeModal()">Close</h4>
             <h4 class="title">${novel.name}</h4>
