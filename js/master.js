@@ -18,14 +18,10 @@ function openModal(id) {
         var modal = document.querySelector(".modalContent");
         //loading the empty html structure to the modal
         modal.innerHTML = `
-            <h4 id="close" class="close" onclick="closeModal()">x</h4>
-            <h3 class="title">${novel.name}</h3>
-            <h4 class="ranking">Rating: ${novel.ranking}/5</h4>
-            <div class="holder">
-                <a href="${novel.picSource}">
-                    <img src="${novel.picSource}" alt="${novel.name} Cover" class="cover materialboxed" width="230px" height="329px">
-                </a>
-            </div>
+            <h4 class="btn purple lighten-2 stickOn" onclick="closeModal()">Close</h4>
+            <h4 class="title">${novel.name}</h4>
+            <h5 class="ranking">Rating: ${novel.ranking}/5</h5>
+            <img src="${novel.picSource}" alt="${novel.name} Cover" width="230px" height="329px">
             <div class="linkparent">
                 <a href="${novel.url}" class="link">More Information here</a>
             </div>

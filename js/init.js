@@ -36,7 +36,7 @@ window.onload = function(){
             <div class="novel">
                 <h4 class="title">${nameInsert}</h4>
                 <h5 class="ranking">Rating: ${response[i].ranking}/5</h5>
-                <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover" width="auto" height="400px">
+                <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover">
                 <button class="btn-small purple lighten-2" onclick="openModal('${response[i]._id}')">More Information</button>
                 </div>
             `

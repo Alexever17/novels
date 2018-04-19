@@ -32,6 +32,13 @@
 
 // MAIN AREA
 
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel {
     height: calc(100vh - 64px);
 }
@@ -42,20 +49,11 @@
     overflow-y: auto !important;
 }
 
-@include media(600px) {
-    .carousel {
-        height: calc(100vh - 52px);
-    }
-
-    .carousel-item {
-        display: flex;
-        align-items: center;
-        height: calc(100vh - 52px) !important;
-        width: 80vw !important;
-    }
-}
-
 .novel {
+    img {
+        width: auto;
+        height: 400px;
+    }
     h4 {
         margin: 0;
     }
@@ -69,62 +67,83 @@
     }
 }
 
+@include media(600px) {
+    .novel {
+        width: 100%;
+        img {
+            height: 300px;
+        }
+    }
+    .carousel {
+        height: calc(100vh - 52px);
+    }
+
+    .carousel-item {
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 52px) !important;
+        width: 80vw !important;
+    }
+}
+
 // FOOTER
 
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    a {
+        margin-left: 10px;
+    }
 }
 
 .page-footer {
     padding: 10px;
 }
 
+@include media(420px) {
+    footer:nth-child(1) {
+        display: none;
+    }
+}
+
 // MODAL
 
-.modal {
+.modalBOX {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modalContent {
+    .stickOn {
+        position: sticky;
+        top: 10px;
+        margin: 0;
+    }
     background-color: white;
-    margin: auto;
+    margin: 10vh auto;
     padding: 20px;
-    width: 50%;
-    height: 80%;
+    width: 500px;
+    height: 80vh;
     overflow: auto;
+    img {
+        display: block;
+        margin: 20px auto 0 auto;
+    }
     .link {
       display: block;
     }
     .title, .link, .ranking {
       text-align: center;
     }
-}
-
-/* The Modal Close Button */
-.close {
-    color: #333;
-    border: 1px solid #333;
-    font-size: 110%;
-    padding: 0 4px 2px 4px;
-    display: inline;
-}
-
-.close:hover,
-.close:focus {
-    text-decoration: none;
-    cursor: pointer;
 }
 
 @include media(599px) {
@@ -144,15 +163,5 @@ footer {
     .title, .link, .ranking {
       text-align: center;
     }
-  }
-  .close {
-    text-align: center;
-    font-size: 130%;
-    background: white;
-    padding: 0 4px 2px 4px;
-    margin: 0;
-    display: block;
-    position: sticky;
-    top: 0;
   }
 }
