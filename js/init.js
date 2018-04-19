@@ -1,10 +1,9 @@
 $(document).ready(function(){
+    //initialising the side bar for the mobile menu
     $('.sidenav').sidenav();
  });
 
 window.onload = function(){
-
-    counter = 0;
 
     //async make it easier to make promises and await for the requests
     async function asyncCall() {
@@ -12,9 +11,11 @@ window.onload = function(){
         const novel = await axios.get(`https://alexever17.herokuapp.com/api/novels/ranking/5`);
         //gets the array with the data and makes all the small html elements
         divConstructor(novel.data);
+        //deleting the blue circle
         if (document.getElementById('preloader')) {
             document.getElementById('preloader').remove();
         }
+        //initialising the carousel/slider with all the novels
         $('.carousel').carousel();
     }
 
@@ -22,11 +23,14 @@ window.onload = function(){
 
     //makes a div element out of the get request --> div with class "novel"
     function divConstructor(response) {
+        //random shuffle of the novels -- master.js
         response = shuffle(response);
+        //some names are too long, so only 46 chars allowed
         characterLimiter = 46;
 
         for (var i = 0; i < 8; i++) {
 
+            //shortening function for the name
             var nameInsert = underXXCharacterCheck(response[i].name, characterLimiter);
 
             var novel = document.createElement("div");
@@ -36,7 +40,7 @@ window.onload = function(){
             <div class="novel">
                 <h4 class="title">${nameInsert}</h4>
                 <h5 class="ranking">Rating: ${response[i].ranking}/5</h5>
-                <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover" width="auto" height="400px">
+                <img src="${response[i].picSource}" alt="${response[i].name} Cover" class="cover">
                 <button class="btn-small purple lighten-2" onclick="openModal('${response[i]._id}')">More Information</button>
                 </div>
             `
