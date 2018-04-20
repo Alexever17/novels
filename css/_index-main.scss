@@ -1,3 +1,38 @@
-.main {
-    background-color: grey;
+.uk-button-primary {
+    color: white !important;
+    background: $color-logo !important;
+}
+
+.arrow {
+    color: black !important;
+}
+
+.novel {
+    background: white;
+    padding: 3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 84vw;
+    margin: 0 0 0 5vw;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Space Mono", cursive;
+        color: black !important;
+    }
+
+    .ranking {
+        margin: 0 0 20px 0 !important;
+    }
+
+    img {
+        height: 50vh;
+        width: auto;
+    }
+
+    .modalButton {
+        margin: 20px 0 0 0;
+    }
 }

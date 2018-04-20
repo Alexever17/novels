@@ -9,6 +9,65 @@
   background: #080516 !important;
 }
 
-.main {
-  background-color: grey;
+.uk-button-primary {
+  color: white !important;
+  background: #b46cff !important;
+}
+
+.arrow {
+  color: black !important;
+}
+
+.novel {
+  background: white;
+  padding: 3%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 84vw;
+  margin: 0 0 0 5vw;
+}
+.novel h1, .novel h2, .novel h3, .novel h4, .novel h5, .novel h6 {
+  font-family: "Space Mono", cursive;
+  color: black !important;
+}
+.novel .ranking {
+  margin: 0 0 20px 0 !important;
+}
+.novel img {
+  height: 50vh;
+  width: auto;
+}
+.novel .modalButton {
+  margin: 20px 0 0 0;
+}
+
+footer {
+  min-height: 56px;
+  color: white;
+  background: #080516;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer a .footer-button {
+  color: white !important;
+  background: #35006c !important;
+}
+
+.body-coloring {
+  background-color: #1A172D;
 }

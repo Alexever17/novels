@@ -12,6 +12,7 @@ $color-primary-1: #47435C;
 $color-primary-2: #262335;
 $color-primary-3: #110D22;
 $color-primary-4: #080516;
+$color-logo: #b46cff;
 
 
 
@@ -30,3 +31,8 @@ $rgba-primary-4: rgba(  8,  5, 22,1);
 
 @import "navbar";
 @import "index-main";
+@import "footer";
+
+.body-coloring {
+    background-color: $color-primary-0;
+}
