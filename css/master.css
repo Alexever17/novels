@@ -14,12 +14,12 @@
   background: #b46cff !important;
 }
 
-.arrow {
-  color: black !important;
-}
-
+/* reverses the color of the arrows */
+/* .arrow {
+    color: black !important;
+} */
 .novel {
-  background: white;
+  border: 2px solid white;
   padding: 3%;
   text-align: center;
   display: -webkit-box;
@@ -37,7 +37,7 @@
 }
 .novel h1, .novel h2, .novel h3, .novel h4, .novel h5, .novel h6 {
   font-family: "Space Mono", cursive;
-  color: black !important;
+  color: white !important;
 }
 .novel .ranking {
   margin: 0 0 20px 0 !important;
@@ -50,6 +50,48 @@
   margin: 20px 0 0 0;
 }
 
+.index-vertical-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: white;
+  padding: 15px 15px 15px 45px;
+  margin: 0 0 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index-vertical-box .index-vertical-bottom {
+  margin: 20px 0 0 0;
+}
+
+.index-large-box {
+  background: white;
+  padding: 15px 15px 15px 45px;
+  margin: 0 0 20px 0 !important;
+}
+
+.uk-table-hover tbody tr:hover, .uk-table-hover > tr:hover {
+  background: #b46cff !important;
+  color: white;
+}
+.uk-table-hover tbody tr:hover th, .uk-table-hover > tr:hover th {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #status-table {
+    display: none;
+  }
+}
 footer {
   min-height: 56px;
   color: white;

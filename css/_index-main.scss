@@ -2,13 +2,13 @@
     color: white !important;
     background: $color-logo !important;
 }
-
-.arrow {
+/* reverses the color of the arrows */
+/* .arrow {
     color: black !important;
-}
+} */
 
 .novel {
-    background: white;
+    border: 2px solid white;
     padding: 3%;
     text-align: center;
     display: flex;
@@ -20,7 +20,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         font-family: "Space Mono", cursive;
-        color: black !important;
+        color: white !important;
     }
 
     .ranking {
@@ -34,5 +34,43 @@
 
     .modalButton {
         margin: 20px 0 0 0;
+    }
+}
+
+.index-vertical-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+
+    background: white;
+
+    padding: 15px 15px 15px 45px;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
+
+    .index-vertical-bottom {
+        margin: 20px 0 0 0;
+    }
+}
+
+.index-large-box {
+    background: white;
+
+    padding: 15px 15px 15px 45px;
+    margin: 0 0 20px 0 !important;
+}
+
+.uk-table-hover tbody tr:hover, .uk-table-hover>tr:hover {
+    th {
+        color: white;
+    }
+    background: $color-logo !important;
+    color: white;
+}
+
+@media only screen and (max-width:600px){
+    #status-table{
+        display: none;
     }
 }
