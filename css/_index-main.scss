@@ -26,6 +26,15 @@
     }
 }
 
+#dbinfo tr:hover {
+    th {
+        color: white !important;
+    }
+    background: $color-logo;
+    color: white !important;
+    cursor: text;
+}
+
 // SLIDER CONTENT-------------------------------------------------------------
 
 .sliderParent {
@@ -44,7 +53,7 @@
     background: $color-primary-3;
     padding: 3%;
     text-align: center;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;

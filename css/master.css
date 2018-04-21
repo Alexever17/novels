@@ -31,6 +31,15 @@
   border: 1px solid black;
 }
 
+#dbinfo tr:hover {
+  background: #b46cff;
+  color: white !important;
+  cursor: text;
+}
+#dbinfo tr:hover th {
+  color: white !important;
+}
+
 .sliderParent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +55,7 @@
 
 .novel {
   border: 1px solid white;
-  background: #200b7f;
+  background: #1a0967;
   padding: 3%;
   text-align: center;
   display: -webkit-box;
