@@ -1,82 +1,36 @@
 .uk-navbar {
   margin-bottom: 0 !important;
-  background: #080516 !important;
+  background: #0B0233 !important;
 }
 .uk-navbar img {
   height: 80px;
 }
 
 .uk-offcanvas-bar {
-  background: #080516 !important;
+  background: #0B0233 !important;
 }
 
 .sidebar-image {
   height: 80px;
 }
 
-.main .uk-comment-body {
-  padding-bottom: 10px !important;
-}
-
-.index-vertical-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background: white;
-  padding: 15px 15px 15px 45px;
-  margin: 0 0 20px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.index-vertical-box .index-vertical-bottom {
-  margin: 20px 0 0 0;
-}
-
-.index-large-box {
-  background: white;
-  padding: 15px 15px 15px 45px;
-  margin: 0 0 20px 0 !important;
-}
-
-.uk-table-hover tbody tr:hover, .uk-table-hover > tr:hover {
-  background: #b46cff !important;
-  color: white;
-}
-.uk-table-hover tbody tr:hover th, .uk-table-hover > tr:hover th {
-  color: white;
-}
-
-@media only screen and (max-width: 640px) {
-  #status-table {
+@media only screen and (max-width: 960px) {
+  #welcoming #dbinfo {
     display: none;
   }
 }
-@media only screen and (min-width: 960px) {
-  .index-vertical-box {
-    padding: 35px 35px 35px 55px;
+@media only screen and (max-width: 700px) {
+  #info img {
+    display: none;
   }
+}
+#welcoming {
+  margin: 15px 15px 15px 0px;
+}
+#welcoming .uk-card {
+  border: 1px solid black;
+}
 
-  .index-large-box {
-    padding: 35px 35px 35px 55px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #welcomeBox {
-    max-width: 1000px;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
 .sliderParent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +45,8 @@
 }
 
 .novel {
-  border: 3px solid white;
+  border: 1px solid white;
+  background: #140750;
   padding: 3%;
   text-align: center;
   display: -webkit-box;
@@ -163,7 +118,7 @@
 footer {
   min-height: 56px;
   color: white;
-  background: #080516;
+  background: #0B0233;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +130,7 @@ footer {
 }
 footer a .footer-button {
   color: white !important;
-  background: #35006c !important;
+  background: #2E1C7F !important;
 }
 
 #informationButton {
@@ -202,7 +157,7 @@ footer a .footer-button {
 }
 
 .body-coloring {
-  background-color: #1A172D;
+  background-color: #453396;
 }
 
 .uk-button-primary {

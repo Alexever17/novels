@@ -21,6 +21,7 @@ window.onload = function(){
         document.getElementById('spinner').remove();
         document.getElementById('spinner2').remove();
         document.getElementById('spinner3').remove();
+        document.getElementById('dbStatus').innerHTML = "Okay";
     }
 
     asyncCall();

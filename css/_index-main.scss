@@ -1,72 +1,30 @@
 //rules for the elements inside the slider
 @import "mediaqueries";
 
-// WELCOMING BOX---------------------------------------------------------------
+// welcoming section---------------------------------------------------------------
 
-//---------------Left part
-
-.main .uk-comment-body {
-    padding-bottom: 10px !important;
-}
-
-.index-vertical-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-
-    background: white;
-
-    padding: 15px 15px 15px 45px;
-    margin: 0 0 20px 0;
-    box-sizing: border-box;
-
-    .index-vertical-bottom {
-        margin: 20px 0 0 0;
-    }
-}
-
-//---------------------Right Part
-
-.index-large-box {
-    background: white;
-
-    padding: 15px 15px 15px 45px;
-    margin: 0 0 20px 0 !important;
-}
-
-.uk-table-hover tbody tr:hover, .uk-table-hover>tr:hover {
-    th {
-        color: white;
-    }
-    background: $color-logo !important;
-    color: white;
-}
-
-@include break(640){
-    #status-table{
-        display: none;
-    }
-}
-
-// fixing the padding for both sides on desktops
-@include breakMin(960) {
-    .index-vertical-box {
-        padding: 35px 35px 35px 55px;
-    }
-    .index-large-box {
-        padding: 35px 35px 35px 55px;
-    }
-}
-
-// making sure the welcomingBox isnt to large on desktops
-@include breakMin(1000){
-    #welcomeBox {
-        max-width: 1000px;
-        margin: 0 auto;
-        box-sizing: border-box;
+@include break(960) {
+    #welcoming {
+        #dbinfo {
+            display: none;
+        }
     }
 };
+
+@include break(700) {
+    #info {
+        img {
+            display: none;
+        }
+    }
+};
+
+#welcoming {
+    margin: 15px 15px 15px 0px;
+    .uk-card {
+        border: 1px solid black;
+    }
+}
 
 // SLIDER CONTENT-------------------------------------------------------------
 
@@ -82,9 +40,11 @@
 
 //slider elements
 .novel {
-    border: 3px solid white;
+    border: 1px solid white;
+    background: $color-primary-3;
     padding: 3%;
     text-align: center;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +101,7 @@
 
 //Arrows inside the slider
     .arrow {
-        background: rgba(255,255,255,1) !important;
+        background: white !important;
         border: 1px solid black;
         svg {
             color: black;
@@ -153,7 +113,4 @@
     .novel {
         max-width: 25vw;
     }
-    // #sliderHomepage .sliderParent {
-    //     padding-right: 20px;
-    // }
 }

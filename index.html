@@ -63,71 +63,88 @@
 
     <main class="main" id="main">
 
-        <!-- The welcoming box with a picture a message and stats about the database -->
-        <div class="uk-child-width-1-2@s" uk-grid id="welcomeBox">
-            <!-- left part of the box -->
-            <div class="index-vertical-box">
-                <!-- the library image -->
-                <img src="images\library.jpg" alt="">
-                <!-- message from the admin -->
-                <div class="index-vertical-bottom">
-                    <article class="uk-comment">
-                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <!-- admins profile pic -->
-                                <img class="uk-comment-avatar" src="https://pbs.twimg.com/profile_images/790276964049362944/MXjuA9bL_400x400.jpg" width="80" height="80" alt="">
-                            </div>
-                            <!-- the message itself -->
-                            <div class="uk-width-expand">
-                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alex</a></h4>
-                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                    <li><a href="#" id="timeStamp">12 days ago</a></li>
-                                </ul>
-                            </div>
-                        </header>
-                        <div class="uk-comment-body">
-                            <h3 class="uk-card-title">Welcome!</h3>
-                            <p>I love reading web novel and want to share my passion with you. Please scroll down to see the top selection.</p>
-                        </div>
-                    </article>
+        <div class="uk-grid-small uk-grid-match uk-text-left" uk-grid id="welcoming">
+            <div id="info" class="uk-width-1-1 uk-width-1-2@xs uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l">
+                <!-- INFO -->
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Where can I read novels?</h3>
+                        <p>Sometimes it is difficult to find the most interesting novels, because many are translated by fans and aren't released official. Luckely novelupdates.com exists, a website which tracks all translated novels and has all the information around them. Licensed, who translated and where to read. Find all of this here:</p>
+                        <a href="https://novelupdates.com">Novel Updates</a>
+                    </div>
+                    <div class="uk-card-media-bottom">
+                        <img src="images/novelupdates.jpg" alt="novelupdates logo">
+                    </div>
                 </div>
             </div>
-            <!-- Database info -->
-            <div class="index-large-box" id="status-table">
-                <div class="index-stats-box"><table class="table table-bordered table-hover table-condensed">
-                    <table class="uk-table uk-table-divider uk-table-hover">
-                        <caption><h3>Database Stats</h3></caption>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th title="Field #1">db</th>
-                                <td>novelsdata</td>
-                            </tr>
-                            <tr>
-                                <th title="Field #3">Views</th>
-                                <td>over 9000</td>
-
-                            </tr>
-                            <tr>
-                                <th title="Field #4">Objects</th>
-                                <td >52</td>
-                            </tr>
-                            <tr>
-                                <th title="Field #17">Status</th>
-                                <td>Okay</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div id="welcome" class="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l">
+                <!-- The welcoming box -->
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="images/library.jpg" alt="stock footage of a library">
+                    </div>
+                    <div class="uk-card-body">
+                        <article class="uk-comment">
+                            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <!-- admins profile pic -->
+                                    <img class="uk-comment-avatar" src="https://pbs.twimg.com/profile_images/790276964049362944/MXjuA9bL_400x400.jpg" width="80" height="80" alt="">
+                                </div>
+                                <!-- the message itself -->
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alex</a></h4>
+                                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                        <li><a href="#" id="timeStamp">12 days ago</a></li>
+                                    </ul>
+                                </div>
+                            </header>
+                            <div class="uk-comment-body">
+                                <h3 class="uk-card-title">Welcome!</h3>
+                                <p>I love reading web novel and want to share my passion with you. On this website you can find all novels i every read. Please scroll down to see my most favorit ones.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div id="dbinfo" class="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l">
+                <!-- Database info -->
+                <div class="uk-card uk-card-default uk-card-body">
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-divider uk-table-hover">
+                            <caption>
+                                <h3>Information:</h3></caption>
+                            <tbody>
+                                <tr>
+                                    <th title="Field #1">Novels Total
+                                    </th>
+                                    <td>48</td>
+                                </tr>
+                                <tr>
+                                    <th title="Field #1">Chinese Novels</th>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <th title="Field #1">Japanese Novels</th>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <th title="Field #1">Korean Novels</th>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <th title="Field #3">Site visits</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th title="Field #17">Database Status</th>
+                                    <td id="dbStatus">Offline</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
-
 
         <!-- Slider -->
         <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider id="sliderHomepage">
