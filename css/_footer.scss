@@ -1,0 +1,14 @@
+footer {
+    min-height: 56px;
+    color: white;
+    background: $color-primary-4;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a .footer-button {
+        color: white !important;
+        background: darken($color-logo, 50%) !important;
+    }
+}
