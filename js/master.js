@@ -4,6 +4,7 @@ function underXXCharacterCheck(name, limiter) {
   return (name.length >= limiter) ? name.slice(0, limiter) + "..." : name;
 }
 
+//shuffles the given arrays elements
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 

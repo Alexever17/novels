@@ -38,12 +38,14 @@
                 <div class="uk-offcanvas-bar">
                     <!-- The button which closes the menu -->
                     <button class="uk-offcanvas-close" type="button" uk-close></button>
-                    <div class="uk-width-1-2@s">
+                    <div class="uk-width-1-1">
                         <!-- The logo and links inside the sidemenu -->
                         <ul class="uk-nav-primary" uk-nav>
                             <li>
-                                <div class="uk-container uk-container-small"><img src="images/logo.png" /></div>
+                                <img class="sidebar-image" src="images/logo.png" />
                             </li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-divider"></li>
                             <li><a href="full-list.html">Full List</a></li>
                             <li><a href="korean.html">Korean Novels</a></li>
                             <li><a href="japanese.html">Japanese Novels</a></li>
@@ -59,20 +61,42 @@
         </div>
     </nav>
 
-    <main class="main">
+    <main class="main" id="main">
 
-        <div class="uk-child-width-1-2@s" uk-grid>
+        <!-- The welcoming box with a picture a message and stats about the database -->
+        <div class="uk-child-width-1-2@s" uk-grid id="welcomeBox">
+            <!-- left part of the box -->
             <div class="index-vertical-box">
+                <!-- the library image -->
                 <img src="images\library.jpg" alt="">
+                <!-- message from the admin -->
                 <div class="index-vertical-bottom">
-                    <h3 class="uk-card-title">Welcome, Alex here!</h3>
-                    <p>I love reading web novel and want to share my passion with you. Please scroll down to see the top selection.</p>
+                    <article class="uk-comment">
+                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <!-- admins profile pic -->
+                                <img class="uk-comment-avatar" src="https://pbs.twimg.com/profile_images/790276964049362944/MXjuA9bL_400x400.jpg" width="80" height="80" alt="">
+                            </div>
+                            <!-- the message itself -->
+                            <div class="uk-width-expand">
+                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alex</a></h4>
+                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                    <li><a href="#" id="timeStamp">12 days ago</a></li>
+                                </ul>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <h3 class="uk-card-title">Welcome!</h3>
+                            <p>I love reading web novel and want to share my passion with you. Please scroll down to see the top selection.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
+            <!-- Database info -->
             <div class="index-large-box" id="status-table">
                 <div class="index-stats-box"><table class="table table-bordered table-hover table-condensed">
                     <table class="uk-table uk-table-divider uk-table-hover">
-                        <caption><h3>Database Status</h3></caption>
+                        <caption><h3>Database Stats</h3></caption>
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -87,18 +111,18 @@
                             <tr>
                                 <th title="Field #3">Views</th>
                                 <td>over 9000</td>
-            
+
                             </tr>
                             <tr>
                                 <th title="Field #4">Objects</th>
-                                <td >52</td>                                
+                                <td >52</td>
                             </tr>
                             <tr>
                                 <th title="Field #17">Status</th>
                                 <td>Okay</td>
                             </tr>
                         </tbody>
-                    </table>        
+                    </table>
                 </div>
             </div>
         </div>
@@ -106,17 +130,17 @@
 
 
         <!-- Slider -->
-        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true">
-            <ul class="uk-slider-items uk-child-width-1 uk-child-width-1-3@s uk-child-width-1-3@m uk-grid">
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider id="sliderHomepage">
+            <ul class="uk-slider-items uk-child-width-1 uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l uk-grid">
                 <!-- The class to load data from the API -->
                 <li class="sliderParent">
-
+                    <span uk-spinner="ratio: 4.5" id="spinner"></span>
                 </li>
                 <li class="sliderParent">
-
+                    <span uk-spinner="ratio: 4.5" id="spinner2"></span>
                 </li>
                 <li class="sliderParent">
-
+                    <span uk-spinner="ratio: 4.5" id="spinner3"></span>
                 </li>
                 <li class="sliderParent">
 
@@ -142,12 +166,14 @@
             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
         </div>
+
     </main>
 
     <footer>
         © 2018 by Oleksandr Malakov <a href="contact.html"><button class="uk-button footer-button">Contact</button></a>
     </footer>
 
+    <!-- MODAL FOR SEARCH -->
     <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
         <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
             <button class="uk-modal-close-full" type="button" uk-close></button>
@@ -156,9 +182,6 @@
             </form>
         </div>
     </div>
-
-
-
 
     <!-- Scripts -->
     <script src="js/master.js"></script>

@@ -1,0 +1,24 @@
+//buttons which lead to novelsupdates.com for further info
+#informationButton {
+        display: block;
+}
+
+//modal itself
+.modalNovel {
+    h4 {
+        margin-top: 20px !important;
+    }
+    .uk-button {
+        text-transform: none !important;
+    }
+
+    .pictureholder {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 80%;
+        height: calc(1.333333 * 80%)
+    }
+}

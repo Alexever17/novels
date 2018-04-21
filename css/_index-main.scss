@@ -1,40 +1,12 @@
-.uk-button-primary {
-    color: white !important;
-    background: $color-logo !important;
-}
-/* reverses the color of the arrows */
-/* .arrow {
-    color: black !important;
-} */
+//rules for the elements inside the slider
+@import "mediaqueries";
 
-.novel {
-    border: 2px solid white;
-    padding: 3%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+// WELCOMING BOX---------------------------------------------------------------
 
-    max-width: 84vw;
-    margin: 0 0 0 5vw;
+//---------------Left part
 
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "Space Mono", cursive;
-        color: white !important;
-    }
-
-    .ranking {
-        margin: 0 0 20px 0 !important;
-    }
-
-    img {
-        height: 50vh;
-        width: auto;
-    }
-
-    .modalButton {
-        margin: 20px 0 0 0;
-    }
+.main .uk-comment-body {
+    padding-bottom: 10px !important;
 }
 
 .index-vertical-box {
@@ -54,6 +26,8 @@
     }
 }
 
+//---------------------Right Part
+
 .index-large-box {
     background: white;
 
@@ -69,8 +43,117 @@
     color: white;
 }
 
-@media only screen and (max-width:600px){
+@include break(640){
     #status-table{
         display: none;
     }
+}
+
+// fixing the padding for both sides on desktops
+@include breakMin(960) {
+    .index-vertical-box {
+        padding: 35px 35px 35px 55px;
+    }
+    .index-large-box {
+        padding: 35px 35px 35px 55px;
+    }
+}
+
+// making sure the welcomingBox isnt to large on desktops
+@include breakMin(1000){
+    #welcomeBox {
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+};
+
+// SLIDER CONTENT-------------------------------------------------------------
+
+.sliderParent {
+    display: flex;
+    justify-content: center;
+}
+
+//PRELOADER IN THE SLIDER
+#spinner {
+    display: block;
+}
+
+//slider elements
+.novel {
+    border: 3px solid white;
+    padding: 3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 86vw;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Space Mono", cursive;
+        color: white !important;
+    }
+
+    .ranking {
+        margin: 20px 0 0 0 !important;
+    }
+
+    img {
+        height: 50vh;
+        width: auto;
+        border: 1px solid white;
+    }
+
+    .modalButton {
+        margin: 20px 0 0 0;
+    }
+}
+
+//------------------ media queries for the slider elements
+
+@include breakMin(600) {
+    .novel {
+        max-width: 60vw;
+    }
+}
+
+@include breakMin(800) {
+    .novel {
+        max-width: 50vw;
+    }
+}
+
+@include breakMin(960) {
+    .novel {
+        max-width: 40vw;
+    }
+    .uk-cover-container {
+        overflow: visible !important;
+    }
+
+@include breakMin(1040) {
+    .novel {
+        max-width: 30vw;
+    }
+};
+
+//Arrows inside the slider
+    .arrow {
+        background: rgba(255,255,255,1) !important;
+        border: 1px solid black;
+        svg {
+            color: black;
+        }
+    }
+}
+
+@include breakMin(1200) {
+    .novel {
+        max-width: 25vw;
+    }
+    // #sliderHomepage .sliderParent {
+    //     padding-right: 20px;
+    // }
 }

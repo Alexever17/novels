@@ -1,4 +1,5 @@
 .uk-navbar {
+  margin-bottom: 0 !important;
   background: #080516 !important;
 }
 .uk-navbar img {
@@ -9,45 +10,12 @@
   background: #080516 !important;
 }
 
-.uk-button-primary {
-  color: white !important;
-  background: #b46cff !important;
+.sidebar-image {
+  height: 80px;
 }
 
-/* reverses the color of the arrows */
-/* .arrow {
-    color: black !important;
-} */
-.novel {
-  border: 2px solid white;
-  padding: 3%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 84vw;
-  margin: 0 0 0 5vw;
-}
-.novel h1, .novel h2, .novel h3, .novel h4, .novel h5, .novel h6 {
-  font-family: "Space Mono", cursive;
-  color: white !important;
-}
-.novel .ranking {
-  margin: 0 0 20px 0 !important;
-}
-.novel img {
-  height: 50vh;
-  width: auto;
-}
-.novel .modalButton {
-  margin: 20px 0 0 0;
+.main .uk-comment-body {
+  padding-bottom: 10px !important;
 }
 
 .index-vertical-box {
@@ -87,9 +55,109 @@
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   #status-table {
     display: none;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .index-vertical-box {
+    padding: 35px 35px 35px 55px;
+  }
+
+  .index-large-box {
+    padding: 35px 35px 35px 55px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #welcomeBox {
+    max-width: 1000px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+.sliderParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#spinner {
+  display: block;
+}
+
+.novel {
+  border: 3px solid white;
+  padding: 3%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 86vw;
+}
+.novel h1, .novel h2, .novel h3, .novel h4, .novel h5, .novel h6 {
+  font-family: "Space Mono", cursive;
+  color: white !important;
+}
+.novel .ranking {
+  margin: 20px 0 0 0 !important;
+}
+.novel img {
+  height: 50vh;
+  width: auto;
+  border: 1px solid white;
+}
+.novel .modalButton {
+  margin: 20px 0 0 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .novel {
+    max-width: 60vw;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .novel {
+    max-width: 50vw;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .novel {
+    max-width: 40vw;
+  }
+
+  .uk-cover-container {
+    overflow: visible !important;
+  }
+}
+@media only screen and (min-width: 960px) and (min-width: 1040px) {
+  .novel {
+    max-width: 30vw;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .arrow {
+    background: white !important;
+    border: 1px solid black;
+  }
+  .arrow svg {
+    color: black;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .novel {
+    max-width: 25vw;
   }
 }
 footer {
@@ -110,6 +178,38 @@ footer a .footer-button {
   background: #35006c !important;
 }
 
+#informationButton {
+  display: block;
+}
+
+.modalNovel h4 {
+  margin-top: 20px !important;
+}
+.modalNovel .uk-button {
+  text-transform: none !important;
+}
+.modalNovel .pictureholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modalNovel img {
+  width: 80%;
+  height: calc(1.333333 * 80%);
+}
+
 .body-coloring {
   background-color: #1A172D;
+}
+
+.uk-button-primary {
+  color: white !important;
+  background: #b46cff !important;
+}
+
+.main {
+  min-height: 100vh;
 }
