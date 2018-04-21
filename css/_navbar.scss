@@ -3,6 +3,12 @@
     background: $color-primary-4 !important;
     img {
         height: 80px;
+        &:hover {
+          animation-name: wiggle;
+          animation-duration: 1000ms;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+        }
     }
 }
 
@@ -12,4 +18,18 @@
 
 .sidebar-image {
     height: 80px;
+    &:hover {
+      animation-name: wiggle;
+      animation-duration: 1000ms;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(4deg);}
+  25% {transform: rotate(-2deg);}
+  50% {transform: rotate(2deg);}
+  75% {transform: rotate(-1deg);}
+  100% {transform: rotate(0deg);}
 }
