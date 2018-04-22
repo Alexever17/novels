@@ -230,6 +230,31 @@ footer a .footer-button {
   height: calc(1.333333 * 80%);
 }
 
+.contactIcon {
+  color: #b46cff;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 640px) {
+  .iconTWO {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+
+  .iconONE {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+.gifEND {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 400px;
+  height: 340px;
+}
+
 .body-coloring {
   background-color: #453396;
 }

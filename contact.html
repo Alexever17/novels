@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Alexever17's Novel Rankings</title>
+    <meta name="description" content="See my favorite novels.">
+    <meta name="keywords" content="Oleksandr, Malakhov, alexever17, novels, fantasy, coding">
+    <meta name="author" content="Oleksandr Malakhov">
+    <link rel="icon" href="images/favicon.gif" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Space+Mono" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body class="body-coloring">
+    <!-- The Navbar -->
+    <nav class="uk-navbar uk-navbar-container uk-margin">
+        <div class="uk-navbar-left">
+            <!-- Logo Alexever17 novel rankings -->
+            <a href="https://alexever17.github.io">
+                <img src="images/logo.png" alt="novels logo">
+            </a>
+        </div>
+        <div class="uk-navbar-right">
+            <!-- The Search Icon and the collapsed hamburger menu -->
+            <a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a>
+            <a class="uk-navbar-toggle" href="#offcanvas-usage" uk-toggle>
+                 <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Menu</span>
+            </a>
+        </div>
+
+        <!-- The Sidemenu which pops up on the left side -->
+        <div class="uk-offcanvas-content">
+            <!-- The whole page content goes here -->
+            <div id="offcanvas-usage" uk-offcanvas>
+                <div class="uk-offcanvas-bar">
+                    <!-- The button which closes the menu -->
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                    <div class="uk-width-1-1">
+                        <!-- The logo and links inside the sidemenu -->
+                        <ul class="uk-nav-primary" uk-nav>
+                            <li>
+                                <a href="https://alexever17.github.io">
+                                    <img src="images/logo.png" alt="" class="sidebar-image">
+                                </a>
+                            </li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="full-list.html">Full List</a></li>
+                            <li><a href="korean.html">Korean Novels</a></li>
+                            <li><a href="japanese.html">Japanese Novels</a></li>
+                            <li><a href="chinese.html">Chinese Novels</a></li>
+                            <li><a href="dropped.html">Dropped</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main" id="main">
+
+        <div class="uk-card uk-card-body uk-card-default uk-width-1-2@s uk-align-center">
+            <article class="uk-comment">
+                <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-comment-avatar" src="https://pbs.twimg.com/profile_images/790276964049362944/MXjuA9bL_400x400.jpg" width="80" height="80" alt="">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alex</a></h4>
+                    </div>
+                </header>
+                <div class="uk-comment-body">
+                    <p>Thanks for visiting my site, I hope you found something interesting! Please feel free to contact me in one of the following ways and have a nice days.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="uk-child-width-expand@s uk-text-center" uk-grid-parallax id="IconSet">
+            <div>
+                <div class="uk-grid-margin"><a href="https://www.facebook.com/profile.php?id=100001317441400&ref=br_rs"><span uk-icon="icon: facebook; ratio: 4" class="contactIcon iconTWO"></span></a></div>
+            </div>
+            <div>
+                <div class="uk-grid-margin"><a href="https://github.com/Alexever17"><span uk-icon="icon: github; ratio: 4" class="contactIcon iconONE"></span></a></div>
+            </div>
+            <div>
+                <div class="uk-grid-margin"><a href="mailto:alexever17@gmail.com"><span uk-icon="icon: mail; ratio: 4" class="contactIcon iconTWO"></span></a></div>
+            </div>
+            <div>
+                <div class="uk-grid-margin"><a href="https://alexever17.github.io"><span uk-icon="icon: world; ratio: 4" class="contactIcon iconONE"></span></a></div>
+            </div>
+        </div>
+
+        <iframe class="gifEND" src="https://giphy.com/embed/26u4b45b8KlgAB7iM" frameBorder="0"></iframe>
+    </main>
+
+    <footer>
+        © 2018 by Oleksandr Malakov</a>
+    </footer>
+
+    <!-- MODAL FOR SEARCH -->
+    <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+        <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <form class="uk-search uk-search-large">
+                <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/master.js"></script>
+</body>
+
+</html>
