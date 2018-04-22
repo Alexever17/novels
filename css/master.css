@@ -237,22 +237,15 @@ footer a .footer-button {
   padding: 10px;
 }
 
-@media only screen and (max-width: 640px) {
-  .iconTWO {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-
-  .iconONE {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-}
 .gifEND {
   display: block;
-  margin: 20px auto 0 auto;
-  width: 400px;
-  height: 340px;
+  margin: 0 auto;
+  height: 200px;
+  border: 10px solid white;
+}
+
+#IconSet a {
+  color: white;
 }
 
 .body-coloring {
