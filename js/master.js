@@ -24,6 +24,46 @@ function shuffle(array) {
   return array;
 }
 
+//async make it easier to make promises and await for the requests
+async function asyncCallOrigin(ArrayIndex, htmlBody) {
+    const requestIdentify = ["chinese","japanese","korean"];
+    //axios is a open source js file which makes get request very easy
+    const novel = await axios.get(`https://alexever17.herokuapp.com/api/novels/origin/${requestIdentify[ArrayIndex]}?sort=1`);
+
+    //gets the array with the data and makes all the small html elements
+    thumbnailConstructor(novel.data, novel.data.length);
+    //make the moduleboxes for the loaded novels
+    moduleConstructor(novel.data, novel.data.length, htmlBody);
+    //remonves the preloader
+    if (document.getElementById('spinner')) {
+        document.getElementById('spinner').remove();
+    }
+}
+
+//
+function thumbnailConstructor(novel, numberIterations) {
+    for (var i = 0; i < numberIterations; i++) {
+        //
+        var novelDIV = document.createElement("div");
+        var nameInsert = underXXCharacterCheck(novel[i].name, 60);
+        // the elements structure
+        novelDIV.innerHTML = `
+        <div>
+            <div class="uk-card uk-card-default uk-card-body color3 novelCountry">
+                <h4 class="title uk-text-center">${nameInsert}</h4>
+                <img src="${novel[i].picSource}" alt="${novel[i].name} Cover" class="coverCountry">
+                <h5 class="ranking uk-text-center">Rating: ${novel[i].ranking}/5</h5>
+                <button uk-toggle="target: #id${novel[i]._id}" class="uk-button uk-button-primary modalButton">More Information</button>
+            </div>
+        </div>
+         `
+        document.getElementById('insertRequestDataHere').appendChild(novelDIV);
+    }
+}
+
+
+
+
 //makes the modal boxes for the novels
 function moduleConstructor(novel, numberIterations, htmlBody) {
 

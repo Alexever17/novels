@@ -312,6 +312,76 @@ footer a .footer-button {
     padding: 8px 12px;
   }
 }
+.uk-card-primary {
+  background: transparent !important;
+}
+
+.firstPicture {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+}
+
+.marginSetter {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.color3 {
+  background-color: #1a0967 !important;
+  color: white;
+}
+
+.paddingChange {
+  padding: 0 !important;
+}
+
+.blackBorder {
+  border: 1px solid black;
+}
+
+.verticalAlign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.novelCountry {
+  border: 1px solid white;
+  padding: 20px 20px 20px 20px !important;
+}
+.novelCountry .title {
+  color: white !important;
+  height: 60px;
+}
+.novelCountry .ranking {
+  color: white !important;
+  margin: 20px 0 20px 0;
+}
+.novelCountry .coverCountry {
+  width: 270px;
+  height: 360px;
+  border: 1px solid white;
+}
+
+#japanese .novelCountry .title {
+  height: 80px;
+}
+
 .body-coloring {
   background-color: #453396;
 }
@@ -323,4 +393,8 @@ footer a .footer-button {
 
 .main {
   min-height: 100vh;
+}
+
+#chinese, #japanese, #korean, #dropped {
+  padding: 15px;
 }

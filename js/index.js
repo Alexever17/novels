@@ -51,6 +51,7 @@ window.onload = function(){
                 <div><img src="${novel[i].picSource}" alt="${novel[i].name} Cover" class="cover">
                 <h5 class="ranking uk-text-center">Rating: ${novel[i].ranking}/5</h5>
                 <button uk-toggle="target: #id${novel[i]._id}" class="uk-button uk-button-primary modalButton">More Information</button>
+                </div>
             `
             document.querySelectorAll(".sliderParent")[i].appendChild(novelDIV);
         }
