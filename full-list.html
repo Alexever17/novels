@@ -65,60 +65,30 @@
         </div>
     </nav>
 
-    <main class="main" id="main">
+    <main class="main" id="full-list">
+        <div class="uk-card uk-card-default uk-card-body tableParent">
+            <h3 class="uk-card-title">Here you can find all novels I have read and my rating of them.<br /> To sort differently click on either the "Name" or "Rating" heading.</h3>
+            <table class="uk-table  uk-table-divider uk-table-hover uk-table-middle">
+                <thead>
+                    <tr>
+                        <th class="tableHeading hideMobile" uk-sticky>#</th>
+                        <th class="tableHeading hideMobile">Cover</th>
+                        <th class="tableHeading alignLeft" id="asyncCallerName">Name</th>
+                        <th class="tableHeading " id="asyncCallerRating">Rating</th>
+                        <th class="tableHeading ">Info</th>
+                    </tr>
+                </thead>
+                <tbody id="insertRequestDataHere">
 
-        <div class="uk-card uk-card-body uk-card-default uk-width-1-2@s uk-align-center">
-            <article class="uk-comment">
-                <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                    <div class="uk-width-auto">
-                        <img class="uk-comment-avatar" src="https://pbs.twimg.com/profile_images/790276964049362944/MXjuA9bL_400x400.jpg" width="80" height="80" alt="">
-                    </div>
-                    <div class="uk-width-expand">
-                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Alex</a></h4>
-                    </div>
-                </header>
-                <div class="uk-comment-body">
-                    <p>Thanks for visiting my site! I hope you found something interesting. Please feel free to contact me in one of the following ways and have a nice days.</p>
-                </div>
-            </article>
+                </tbody>
+            </table>
+            <span uk-spinner="ratio: 4.5" id="spinner"></span>
         </div>
-
-        <div class="uk-child-width-1-4@l uk-child-width-1-2@m uk-child-width-1-2@s uk-text-center" uk-grid-parallax id="IconSet">
-            <div>
-                <div class="uk-grid-margin"><a href="https://www.facebook.com/profile.php?id=100001317441400&ref=br_rs"><span uk-icon="icon: facebook; ratio: 4" class="contactIcon iconTWO"></span></a></div>
-                <div class="uk-grid-margin uk-align-center">
-                    <img class="gifEND uk-border-rounded" src="images/giphy1.gif">
-                    <p><a href="https://giphy.com/">via GIPHY</a></p>
-                </div>
-            </div>
-            <div>
-                <div class="uk-grid-margin"><a href="https://github.com/Alexever17"><span uk-icon="icon: github; ratio: 4" class="contactIcon iconONE"></span></a></div>
-                <div class="uk-grid-margin uk-align-center">
-                    <img class="gifEND uk-border-rounded" src="images/giphy2.gif">
-                    <p><a href="https://giphy.com/">via GIPHY</a></p>
-                </div>
-            </div>
-            <div>
-                <div class="uk-grid-margin"><a href="mailto:alexever17@gmail.com"><span uk-icon="icon: mail; ratio: 4" class="contactIcon iconTWO"></span></a></div>
-                <div class="uk-grid-margin uk-align-center">
-                    <img class="gifEND uk-border-rounded" src="images/giphy3.gif">
-                    <p><a href="https://giphy.com/">via GIPHY</a></p>
-                </div>
-            </div>
-            <div>
-                <div class="uk-grid-margin"><a href="https://alexever17.github.io"><span uk-icon="icon: world; ratio: 4" class="contactIcon iconONE"></span></a></div>
-                <div class="uk-grid-margin uk-align-center">
-                    <img class="gifEND uk-border-rounded" src="images/giphy4.gif">
-                    <p><a href="https://giphy.com/">via GIPHY</a></p>
-                </div>
-            </div>
-        </div>
-
 
     </main>
 
     <footer>
-        © 2018 by Oleksandr Malakov
+        © 2018 by Oleksandr Malakov <a href="contact.html"><button class="uk-button footer-button">Contact</button></a>
     </footer>
 
     <!-- MODAL FOR SEARCH -->
@@ -133,6 +103,8 @@
 
     <!-- Scripts -->
     <script src="js/master.js"></script>
+    <script src="js/full-list.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

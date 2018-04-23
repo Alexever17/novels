@@ -226,10 +226,16 @@ footer a .footer-button {
           justify-content: center;
 }
 .modalNovel img {
-  width: 80%;
-  height: calc(1.333333 * 80%);
+  width: 70%;
+  height: calc(1.333333 * 70%);
 }
 
+@media only screen and (max-width: 640px) {
+  .modalNovel img {
+    width: 80%;
+    height: calc(1.333333 * 80%);
+  }
+}
 .contactIcon {
   color: #b46cff;
   background: white;
@@ -248,6 +254,64 @@ footer a .footer-button {
   color: white;
 }
 
+#full-list {
+  text-align: center;
+}
+#full-list tr:hover {
+  background: #b46cff;
+  color: white !important;
+  cursor: text;
+}
+#full-list tr:hover th {
+  color: white !important;
+}
+#full-list tr:hover button {
+  background: white !important;
+  color: #b46cff !important;
+}
+#full-list table {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#full-list table img {
+  max-width: 60px;
+  height: auto;
+}
+#full-list .tableHeading {
+  font-weight: bold !important;
+  color: black !important;
+  text-align: center;
+}
+#full-list .alignLeft {
+  text-align: left;
+}
+
+.textDecorator {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 640px) {
+  .hideMobile {
+    display: none;
+  }
+
+  .uk-card-body {
+    padding: 10px !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  #full-list tr {
+    font-size: 110%;
+  }
+  #full-list .uk-table td {
+    padding: 8px 8px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #full-list .uk-table td {
+    padding: 8px 12px;
+  }
+}
 .body-coloring {
   background-color: #453396;
 }

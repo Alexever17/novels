@@ -1,3 +1,5 @@
+
+@import "mediaqueries";
 //buttons which lead to novelsupdates.com for further info
 #informationButton {
         display: block;
@@ -18,7 +20,16 @@
     }
 
     img {
-        width: 80%;
-        height: calc(1.333333 * 80%)
+        width: 70%;
+        height: calc(1.333333 * 70%)
     }
 }
+
+@include break(640) {
+    .modalNovel {
+        img {
+            width: 80%;
+            height: calc(1.333333 * 80%)
+        }
+    }
+};

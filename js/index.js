@@ -16,7 +16,7 @@ window.onload = function(){
         //gets the array with the data and makes all the small html elements
         divConstructor(novel.data);
         //make the moduleboxes for the loaded novels
-        moduleConstructor(novel.data);
+        moduleConstructor(novel.data, 8, "main");
         //remonves the preloader
         document.getElementById('spinner').remove();
         document.getElementById('spinner2').remove();
@@ -55,32 +55,4 @@ window.onload = function(){
             document.querySelectorAll(".sliderParent")[i].appendChild(novelDIV);
         }
     }
-    //makes the modal boxes for the novels
-    function moduleConstructor(novel) {
-
-        for (var i = 0; i < 8; i++) {
-
-            var modal = document.createElement("div");
-            modal.setAttribute("id", "id" + novel[i]._id);
-            modal.setAttribute("uk-modal", "")
-            // the elements structure
-            modal.innerHTML = `
-            <div class="uk-modal-dialog uk-modal-body">
-                <div class="modalNovel">
-                    <button class="uk-modal-close uk-button uk-button-danger" type="button">X Close</button>
-                    <h4 class="title uk-modal-title uk-heading-line uk-text-center">${novel[i].name}</h4>
-                    <div class="pictureholder">
-                        <img src="${novel[i].picSource}" alt="${novel[i].name} Cover" class="cover">
-                    </div>
-                    <h4 class="ranking uk-text-center">Rating: ${novel[i].ranking}/5</h4>
-                    <a href="${novel[i].url}" class="uk-align-center" id="informationButton">
-                        <button class="uk-button uk-button-primary modalButton uk-align-center">Novelupdates.com</button>
-                    </a>
-                    <p class="description"><b>Description:</b><br>${novel[i].description}</p>
-                </div>
-            </div>
-            `
-            document.getElementById("main").appendChild(modal);
-        }
-    }
-  }
+ }

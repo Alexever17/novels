@@ -1,0 +1,68 @@
+@import "mediaqueries";
+
+#full-list {
+    text-align: center;
+
+    tr:hover {
+        th {
+            color: white !important;
+        }
+        background: $color-logo;
+        color: white !important;
+        cursor: text;
+        button {
+            background: white !important;
+            color: $color-logo !important;
+        }
+    }
+
+    table {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        img {
+            max-width: 60px;
+            height: auto;
+        }
+    }
+
+    .tableHeading {
+        font-weight: bold !important;
+        color: black !important;
+        text-align: center;
+    }
+
+    .alignLeft {
+        text-align: left;
+    }
+}
+
+.textDecorator {
+    text-decoration: underline;
+}
+
+@include break(640) {
+    .hideMobile {
+        display: none;
+    }
+    .uk-card-body {
+        padding: 10px !important;
+    }
+}
+
+@include breakMin(641) {
+    #full-list {
+        tr {
+            font-size: 110%;
+        }
+        .uk-table td {
+            padding: 8px 8px;
+        }
+    }
+}
+
+@include breakMin(800) {
+    #full-list .uk-table td {
+            padding: 8px 12px;
+    }
+}
