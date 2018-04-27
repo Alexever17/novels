@@ -257,6 +257,9 @@ footer a .footer-button {
 #full-list {
   text-align: center;
 }
+#full-list #asyncCallerName, #full-list #asyncCallerRating {
+  cursor: pointer;
+}
 #full-list tr:hover {
   background: #b46cff;
   color: white !important;
