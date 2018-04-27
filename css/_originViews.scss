@@ -1,23 +1,24 @@
 @import "mediaqueries";
-
+//the first card with the picture inside
 .uk-card-primary {
     background: transparent !important;
 }
 
+//the picture inside the first card
 .firstPicture {
     max-width: 500px;
     width: 100%;
     height: auto;
     border: 1px solid white;
 }
-
+//inside the first card, positions the image
 .marginSetter {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: flex-start;
 }
-
+//is the background for the cards with novels inside the 3 stands for the primery 3 color
 .color3 {
     background-color: $color-primary-3 !important;
     color: white;
@@ -36,10 +37,10 @@
     justify-content: center;
     flex-direction: column;
 }
-
+//the novels insde the cards
 .novelCountry {
     border: 1px solid white;
-    padding: 20px 20px 20px 20px !important;
+    padding: 20px !important;
 
     .title {
         color: white !important;
@@ -55,7 +56,7 @@
         border: 1px solid white;
     }
 }
-
+//japanese novels have longer names
 #japanese .novelCountry .title {
         height: 80px;
     }

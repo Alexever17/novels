@@ -1,5 +1,6 @@
 @import "mediaqueries";
 
+//those are the icons for facebook and such
 .contactIcon {
     color: $color-logo;
     background: white;
@@ -7,6 +8,7 @@
     padding: 10px;
 }
 
+//class for the gifs
 .gifEND {
     display: block;
     margin: 0 auto;
@@ -14,6 +16,7 @@
     border: 10px solid white;
 }
 
+//overarching grid structure with the gifs and links
 #IconSet a{
     color: white;
 }

@@ -1,6 +1,7 @@
 .uk-navbar {
     margin-bottom: 0 !important;
     background: $color-primary-4 !important;
+    //the logo
     img {
         height: 80px;
         &:hover {
@@ -12,10 +13,12 @@
     }
 }
 
+//setting the nav color
 .uk-offcanvas-bar{
     background: $color-primary-4 !important;
 }
 
+//the logo in the sidebar
 .sidebar-image {
     height: 80px;
     &:hover {
@@ -26,6 +29,7 @@
     }
 }
 
+//animation for the logo
 @keyframes wiggle {
   0% {transform: rotate(4deg);}
   25% {transform: rotate(-2deg);}

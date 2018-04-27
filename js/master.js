@@ -28,6 +28,7 @@ function shuffle(array) {
 async function asyncCallOrigin(ArrayIndex, htmlBody) {
     const requestIdentify = ["chinese","japanese","korean"];
     //axios is a open source js file which makes get request very easy
+    //as given in the parameters the http request changes between the 3 infos
     const novel = await axios.get(`https://alexever17.herokuapp.com/api/novels/origin/${requestIdentify[ArrayIndex]}?sort=1`);
 
     //gets the array with the data and makes all the small html elements
@@ -40,7 +41,7 @@ async function asyncCallOrigin(ArrayIndex, htmlBody) {
     }
 }
 
-//
+//makes thumbnails for the different country views numberIterations identifies how many elements needs to be created, one element per loop
 function thumbnailConstructor(novel, numberIterations) {
     for (var i = 0; i < numberIterations; i++) {
         //

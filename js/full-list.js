@@ -7,6 +7,7 @@ window.onload = function(){
 async function asyncCall(sortID) {
     //axios is a open source js file which makes get request very easy
     const novel = await axios.get(`https://alexever17.herokuapp.com/api/novels?sort=${sortID}`);
+    //deletes the content of the table if there is something
     document.getElementById('insertRequestDataHere').innerHTML = "";
     //gets the array with the data and makes all the small html elements
     tableConstructor(novel.data, novel.data.length);
@@ -37,9 +38,12 @@ function tableConstructor(novel, numberIterations) {
 }
 
 let name = 3; let rating = 1;
+//adding an eventlistener to the name heading of the table
 document.getElementById("asyncCallerName").addEventListener("click", function() {
+    //adding an underline so that its easier to see which one is active
     document.getElementById('asyncCallerName').classList.add("textDecorator");
     document.getElementById('asyncCallerRating').classList.remove("textDecorator");
+    //starts with an alphabetic sorting or reverse if triggered again
     if (name == 3) {
         asyncCall(3);
         name = 4;
@@ -48,9 +52,12 @@ document.getElementById("asyncCallerName").addEventListener("click", function() 
         name = 3;
     }
 });
+//adding an eventlistener to the name heading of the table
 document.getElementById("asyncCallerRating").addEventListener("click", function() {
+    //adding an underline so that its easier to see which one is active
     document.getElementById('asyncCallerName').classList.remove("textDecorator");
     document.getElementById('asyncCallerRating').classList.add("textDecorator");
+    //starts with a sorting of 5 to 1, reverse if called again
     if (name == 1) {
         asyncCall(1);
         name = 2;

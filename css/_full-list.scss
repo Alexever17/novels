@@ -2,6 +2,7 @@
 
 #full-list {
     text-align: center;
+    //those are the heading for the table name and rating
     #asyncCallerName, #asyncCallerRating {
         cursor: pointer;
     }
@@ -40,6 +41,7 @@
     }
 }
 
+//this gets added to the active heading when sorting
 .textDecorator {
     text-decoration: underline;
 }

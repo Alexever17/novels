@@ -16,12 +16,14 @@ window.onload = function(){
         //gets the array with the data and makes all the small html elements
         divConstructor(novel.data);
         //make the moduleboxes for the loaded novels
+        //8 is the number i of the elements i want to have inside the slider, "main" is the id where to load modals with infos to
         moduleConstructor(novel.data, 8, "main");
-        //remonves the preloader
+        //remonves the preloaders
         document.getElementById('spinner').remove();
         document.getElementById('spinner2').remove();
         document.getElementById('spinner3').remove();
-        document.getElementById('dbStatus').innerHTML = "Okay";
+        //its offline by default
+        document.getElementById('dbStatus').innerHTML = "Online";
     }
 
     asyncCall();
@@ -31,7 +33,7 @@ window.onload = function(){
     function divConstructor(novel) {
         //random shuffle of the novels -- master.js
         novel = shuffle(novel);
-        //some names are too long, so only 46 chars allowed
+        //some names are too long, so only 40 chars allowed
         characterLimiter = 40;
         characterMinimum = 27;
 
