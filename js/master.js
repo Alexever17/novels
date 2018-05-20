@@ -53,7 +53,7 @@ function thumbnailConstructor(novel, numberIterations) {
             <div class="uk-card uk-card-default uk-card-body color3 novelCountry">
                 <h4 class="title uk-text-center">${nameInsert}</h4>
                 <img src="${novel[i].picSource}" alt="${novel[i].name} Cover" class="coverCountry">
-                <h5 class="ranking uk-text-center">Rating: ${novel[i].ranking}/5</h5>
+                <h5 class="ranking uk-text-center">Rating: ${novel[i].ranking}/10</h5>
                 <button uk-toggle="target: #id${novel[i]._id}" class="uk-button uk-button-primary modalButton">More Information</button>
             </div>
         </div>
@@ -82,7 +82,7 @@ function moduleConstructor(novel, numberIterations, htmlBody) {
                 <div class="pictureholder">
                     <img src="${novel[i].picSource}" alt="${novel[i].name} Cover" class="cover">
                 </div>
-                <h4 class="ranking uk-text-center">Rating: ${novel[i].ranking}/5</h4>
+                <h4 class="ranking uk-text-center">Rating: ${novel[i].ranking}/10</h4>
                 <a href="${novel[i].url}" class="uk-align-center" id="informationButton">
                     <button class="uk-button uk-button-primary modalButton uk-align-center">Novelupdates.com</button>
                 </a>

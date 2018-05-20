@@ -30,7 +30,7 @@ function tableConstructor(novel, numberIterations) {
                  <td class="hideMobile">${i+1}</td>
                  <td class="hideMobile"><img src="${novel[i].picSource}" /></td>
                  <td class="alignLeft">${novel[i].name}</td>
-                 <td>${novel[i].ranking} / 5</td>
+                 <td>${novel[i].ranking} / 10</td>
                  <td><button uk-toggle="target: #id${novel[i]._id}" class="uk-button uk-button-primary modalButton">Info</button>
          `
         document.getElementById('insertRequestDataHere').appendChild(novelDIV);

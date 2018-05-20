@@ -2,11 +2,9 @@
   margin-bottom: 0 !important;
   background: #0B0233 !important;
 }
-
 .uk-navbar img {
   height: 80px;
 }
-
 .uk-navbar img:hover {
   -webkit-animation-name: wiggle;
           animation-name: wiggle;
@@ -25,7 +23,6 @@
 .sidebar-image {
   height: 80px;
 }
-
 .sidebar-image:hover {
   -webkit-animation-name: wiggle;
           animation-name: wiggle;
@@ -82,23 +79,19 @@
             transform: rotate(0deg);
   }
 }
-
 @media only screen and (max-width: 960px) {
   #welcoming #dbinfo {
     display: none;
   }
 }
-
 @media only screen and (max-width: 700px) {
   #info img {
     display: none;
   }
 }
-
 #welcoming {
   margin: 15px 15px 15px 0px;
 }
-
 #welcoming .uk-card {
   border: 1px solid black;
 }
@@ -108,7 +101,6 @@
   color: white !important;
   cursor: text;
 }
-
 #dbinfo tr:hover th {
   color: white !important;
 }
@@ -143,22 +135,18 @@
           justify-content: center;
   width: 86vw;
 }
-
 .novel h1, .novel h2, .novel h3, .novel h4, .novel h5, .novel h6 {
   font-family: "Space Mono", cursive;
   color: white !important;
 }
-
 .novel .ranking {
   margin: 20px 0 0 0 !important;
 }
-
 .novel img {
   height: 50vh;
   width: auto;
   border: 1px solid white;
 }
-
 .novel .modalButton {
   margin: 20px 0 0 0;
 }
@@ -168,28 +156,25 @@
     max-width: 60vw;
   }
 }
-
 @media only screen and (min-width: 800px) {
   .novel {
     max-width: 50vw;
   }
 }
-
 @media only screen and (min-width: 960px) {
   .novel {
     max-width: 40vw;
   }
+
   .uk-cover-container {
     overflow: visible !important;
   }
 }
-
 @media only screen and (min-width: 960px) and (min-width: 1040px) {
   .novel {
     max-width: 30vw;
   }
 }
-
 @media only screen and (min-width: 960px) {
   .arrow {
     background: white !important;
@@ -199,13 +184,11 @@
     color: black;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .novel {
     max-width: 25vw;
   }
 }
-
 footer {
   min-height: 56px;
   color: white;
@@ -219,7 +202,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
-
 footer a .footer-button {
   color: white !important;
   background: #2E1C7F !important;
@@ -232,11 +214,9 @@ footer a .footer-button {
 .modalNovel h4 {
   margin-top: 20px !important;
 }
-
 .modalNovel .uk-button {
   text-transform: none !important;
 }
-
 .modalNovel .pictureholder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,7 +225,6 @@ footer a .footer-button {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .modalNovel img {
   width: 70%;
   height: calc(1.333333 * 70%);
@@ -257,7 +236,6 @@ footer a .footer-button {
     height: calc(1.333333 * 80%);
   }
 }
-
 .contactIcon {
   color: #b46cff;
   background: white;
@@ -279,42 +257,37 @@ footer a .footer-button {
 #full-list {
   text-align: center;
 }
-
 #full-list #asyncCallerName, #full-list #asyncCallerRating {
   cursor: pointer;
 }
-
+#full-list #asyncCallerRating {
+  padding: 16px 14px;
+}
 #full-list tr:hover {
   background: #b46cff;
   color: white !important;
   cursor: text;
 }
-
 #full-list tr:hover th {
   color: white !important;
 }
-
 #full-list tr:hover button {
   background: white !important;
   color: #b46cff !important;
 }
-
 #full-list table {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 #full-list table img {
   max-width: 60px;
   height: auto;
 }
-
 #full-list .tableHeading {
   font-weight: bold !important;
   color: black !important;
   text-align: center;
 }
-
 #full-list .alignLeft {
   text-align: left;
 }
@@ -327,11 +300,11 @@ footer a .footer-button {
   .hideMobile {
     display: none;
   }
+
   .uk-card-body {
     padding: 10px !important;
   }
 }
-
 @media only screen and (min-width: 641px) {
   #full-list tr {
     font-size: 110%;
@@ -340,13 +313,11 @@ footer a .footer-button {
     padding: 8px 8px;
   }
 }
-
 @media only screen and (min-width: 800px) {
   #full-list .uk-table td {
     padding: 8px 12px;
   }
 }
-
 .uk-card-primary {
   background: transparent !important;
 }
@@ -399,17 +370,14 @@ footer a .footer-button {
   border: 1px solid white;
   padding: 20px !important;
 }
-
 .novelCountry .title {
   color: white !important;
   height: 60px;
 }
-
 .novelCountry .ranking {
   color: white !important;
   margin: 20px 0 20px 0;
 }
-
 .novelCountry .coverCountry {
   width: 270px;
   height: 360px;
