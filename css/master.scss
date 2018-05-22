@@ -22,6 +22,11 @@ $color-logo: #b46cff;
     background-color: $color-primary-1;
 }
 
+.explainationBox {
+    justify-content: start;
+    padding-top: 19px; 
+}
+
 //general rule for all buttons
 .uk-button-primary {
     color: white !important;

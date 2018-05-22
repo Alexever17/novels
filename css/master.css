@@ -410,6 +410,13 @@ footer a .footer-button {
   background-color: #453396;
 }
 
+.explainationBox {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-top: 19px;
+}
+
 .uk-button-primary {
   color: white !important;
   background: #b46cff !important;
