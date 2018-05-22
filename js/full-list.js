@@ -21,15 +21,20 @@ async function asyncCall(sortID) {
 
 //makes a div element out of the get request and puts it into the slider
 function tableConstructor(novel, numberIterations) {
+    var nameInsert;
     for (var i = 0; i < numberIterations; i++) {
-        //the slider elements
+        nameInsert = novel[i].name;
+        if (novel[i].dropped) {
+            nameInsert += ' <span class="uk-label-danger">DROPPED</span>';
+        }
+        //the row elements
         var novelDIV = document.createElement("tr");
         novelDIV.setAttribute("class", "novelTable");
         // the elements structure
         novelDIV.innerHTML = `
                  <td class="hideMobile">${i+1}</td>
                  <td class="hideMobile"><img src="${novel[i].picSource}" /></td>
-                 <td class="alignLeft">${novel[i].name}</td>
+                 <td class="alignLeft">${nameInsert}</td>
                  <td>${novel[i].ranking} / 10</td>
                  <td><button uk-toggle="target: #id${novel[i]._id}" class="uk-button uk-button-primary modalButton">Info</button>
          `

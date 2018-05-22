@@ -43,10 +43,15 @@ async function asyncCallOrigin(ArrayIndex, htmlBody) {
 
 //makes thumbnails for the different country views numberIterations identifies how many elements needs to be created, one element per loop
 function thumbnailConstructor(novel, numberIterations) {
+    console.log(novel[0].dropped);
+    
     for (var i = 0; i < numberIterations; i++) {
         //
         var novelDIV = document.createElement("div");
         var nameInsert = underXXCharacterCheck(novel[i].name, 60);
+        if (novel[i].dropped) {            
+            nameInsert += ' <span class="uk-label-danger">DROPPED</span>';
+        }
         // the elements structure
         novelDIV.innerHTML = `
         <div>

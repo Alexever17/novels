@@ -8,7 +8,13 @@
     }
 
     #asyncCallerRating {
-        padding: 16px 14px;
+        padding: 16px 20px;
+    }
+
+    .uk-label-danger {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        border-radius: 3px;
     }
 
     tr:hover {
@@ -56,6 +62,12 @@
     }
     .uk-card-body {
         padding: 10px !important;
+    }
+    .modalButton {
+        padding: 0 10px;
+    }
+    #asyncCallerRating {
+        padding: 16px 12px !important;
     }
 }
 

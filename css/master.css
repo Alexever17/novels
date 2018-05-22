@@ -261,7 +261,12 @@ footer a .footer-button {
   cursor: pointer;
 }
 #full-list #asyncCallerRating {
-  padding: 16px 14px;
+  padding: 16px 20px;
+}
+#full-list .uk-label-danger {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 #full-list tr:hover {
   background: #b46cff;
@@ -303,6 +308,14 @@ footer a .footer-button {
 
   .uk-card-body {
     padding: 10px !important;
+  }
+
+  .modalButton {
+    padding: 0 10px;
+  }
+
+  #asyncCallerRating {
+    padding: 16px 12px !important;
   }
 }
 @media only screen and (min-width: 641px) {
@@ -369,6 +382,11 @@ footer a .footer-button {
 .novelCountry {
   border: 1px solid white;
   padding: 20px !important;
+}
+.novelCountry .uk-label-danger {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 .novelCountry .title {
   color: white !important;
