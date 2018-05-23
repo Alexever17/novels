@@ -3,7 +3,7 @@ An overview of my favorite japanese/chinese/korean novels and my ratings for the
 
 ## Getting Started
 
-Here is the live Website: https://alexever17.github.io/novels/
+Here is the live Website: https://alex-novels.xyz/
 
 ### Prerequisites
 
