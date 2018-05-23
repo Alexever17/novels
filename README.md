@@ -11,7 +11,7 @@ None at this moment
 
 ### Installing
 
-Just fork it and get it on your machine. Then just go "npm install" in the folder
+Just fork it and get it on your machine.
 
 ## API
 
@@ -20,8 +20,7 @@ Head to https://github.com/Alexever17/novelsAPI for the API!
 ## Built With
 
 * [SASS (SCSS)](https://sass-lang.com/) - CSS Preprocessor
-* [NODE.JS](https://nodejs.org/en/) - The backend
-* [MONGODB](https://www.mongodb.com/) - The Database
+* [UIkit](https://getuikit.com/) - The styling library and some functionality like the slider
 
 ## Contributing
 
