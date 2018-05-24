@@ -1,6 +1,8 @@
 //rules for the elements inside the slider
 @import "mediaqueries";
 
+$amount: calc(5vw - 10px);
+
 // welcoming section---------------------------------------------------------------
 
 @include break(960) {
@@ -20,9 +22,12 @@
 };
 
 #welcoming {
-    margin: 15px 15px 15px 0px;
+    margin: 15px $amount 15px $amount;
     .uk-card {
         border: 1px solid black;
+    }
+    &>* {
+        padding: 0 10px;
     }
 }
 

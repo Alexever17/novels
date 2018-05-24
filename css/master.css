@@ -90,10 +90,13 @@
   }
 }
 #welcoming {
-  margin: 15px 15px 15px 0px;
+  margin: 15px calc(5vw - 10px) 15px calc(5vw - 10px);
 }
 #welcoming .uk-card {
   border: 1px solid black;
+}
+#welcoming > * {
+  padding: 0 10px;
 }
 
 #dbinfo tr:hover {
@@ -323,7 +326,7 @@ footer a .footer-button {
     font-size: 110%;
   }
   #full-list .uk-table td {
-    padding: 8px 8px;
+    padding: 8px 12px;
   }
 }
 @media only screen and (min-width: 800px) {
