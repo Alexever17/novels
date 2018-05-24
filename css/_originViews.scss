@@ -7,7 +7,6 @@
 
 //the picture inside the first card
 .firstPicture {
-    max-width: 500px;
     width: 100%;
     height: auto;
     border: 1px solid white;
@@ -40,30 +39,54 @@
 }
 //the novels insde the cards
 .novelCountry {
-    .uk-label-danger {
-        font-size: 0.7rem;
-        padding: 2px 6px;
-        border-radius: 3px;
-    }
-
     border: 1px solid white;
-    padding: 20px !important;
+    padding: 1rem !important;
 
     .title {
         color: white !important;
-        height: 60px;
+        height: 4rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        &>* {
+            flex: 0 0 87%;
+        }
     }
     .ranking {
         color: white !important;
         margin: 20px 0 20px 0;
     }
     .coverCountry {
-        width: 270px;
-        height: 360px;
+        width: 90%;
+        height: 90%;
         border: 1px solid white;
     }
+
+    .uk-label-danger {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.2rem;
+    }
 }
+
 //japanese novels have longer names
 #japanese .novelCountry .title {
-        height: 80px;
+        height: 5rem;
+}
+
+@include breakMin(640) {
+    .novelCountry {
+        .title {
+            color: white !important;
+            height: 4rem;
+            display: inherit;
+        }
+        .coverCountry {
+            width: 270px;
+            height: 360px;
+        }
     }
+}
+
+   
